@@ -1,6 +1,9 @@
 #pragma once
 #include <string>
 #include "FrutaDiablo.h"
+#include <fstream>
+#include <ostream>
+
 
 using namespace std;
 
@@ -34,4 +37,6 @@ public:
 	void setHakiObs(bool);
 	void setHakiArm(bool);
 	void setHakiRey(bool);
+
+	virtual void escribir(string);
 };

@@ -7,3 +7,7 @@ Marina::Marina(string raza, int edad, string nombre,FrutaDiablo* fruta, bool hak
 Marina::~Marina(){
 
 }	
+
+void Marina::escribir(string nombre){
+
+}

@@ -11,5 +11,6 @@ public:
 	Paramecia(string , string);
 	~Paramecia();
 	
+	void escribir(string);
 
 };

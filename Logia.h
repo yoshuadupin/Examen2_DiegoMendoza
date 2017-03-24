@@ -9,5 +9,7 @@ private:
 public:
 	Logia(string , string);
 	~Logia();
-	
+
+
+	void escribir(string);	
 };

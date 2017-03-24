@@ -22,9 +22,12 @@ int main(){
 	vector<Seres*> seres;
 	vector<FrutaDiablo*> frutas;
 
-	
+	Paramecia* probar = new Paramecia("Gumu gumi" , "NO hace nada");
+	probar->escribir("probar");
 
-	
+
+
+
 	return 0;
 }
 

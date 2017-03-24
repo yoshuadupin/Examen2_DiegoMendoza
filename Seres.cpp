@@ -54,6 +54,10 @@ void Seres::setHakiRey(bool hakiRey){
 	this->hakiRey;
 }
 
+void Seres::escribir(string nombre){
+	
+}
+
 Seres::~Seres(){
 	
 }

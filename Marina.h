@@ -1,6 +1,8 @@
 #pragma once
 #include "Seres.h"
 #include <string>
+#include <fstream>
+#include <ostream>
 
 
 using namespace std;
@@ -14,5 +16,8 @@ private:
 public:
 	Marina(string , int , string ,FrutaDiablo*, bool  , bool ,bool ,string , string);
 	~Marina();
+
+	void escribir(string);
+
 	
 };

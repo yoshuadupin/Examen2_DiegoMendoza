@@ -9,3 +9,8 @@ FrutaDiablo::FrutaDiablo(string nombre){
 FrutaDiablo::~FrutaDiablo(){
 	
 }
+
+void FrutaDiablo::escribir(string nombre){
+
+}
+
