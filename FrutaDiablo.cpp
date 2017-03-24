@@ -11,6 +11,6 @@ FrutaDiablo::~FrutaDiablo(){
 }
 
 void FrutaDiablo::escribir(string nombre){
-
+	cout<<"Hola"<<endl;
 }
 

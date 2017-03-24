@@ -9,5 +9,5 @@ Marina::~Marina(){
 }	
 
 void Marina::escribir(string nombre){
-
+	
 }

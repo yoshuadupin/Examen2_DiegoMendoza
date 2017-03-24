@@ -20,4 +20,4 @@ void Logia::escribir(string nombre){
 	file<<elemento;
 	file.close();
 
-}
+}	
