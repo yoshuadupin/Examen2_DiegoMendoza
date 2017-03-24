@@ -38,5 +38,5 @@ public:
 	void setHakiArm(bool);
 	void setHakiRey(bool);
 
-	virtual void escribir(string);
+	virtual void escribir();
 };

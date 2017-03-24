@@ -15,4 +15,5 @@ public:
 	Piratas( string , int , string ,FrutaDiablo*, bool  , bool ,bool ,string ,string , string );
 	~Piratas();
 	
+	void escribir();	
 };

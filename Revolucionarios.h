@@ -11,5 +11,6 @@ private:
 public:
 	Revolucionarios(string , int , string ,FrutaDiablo*, bool  , bool ,bool  , string);
 	~Revolucionarios();
-	
+
+    void escribir();	
 };

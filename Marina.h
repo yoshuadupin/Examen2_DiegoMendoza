@@ -17,7 +17,7 @@ public:
 	Marina(string , int , string ,FrutaDiablo*, bool  , bool ,bool ,string , string);
 	~Marina();
 
-	void escribir(string);
+	void escribir();
 
 	
 };

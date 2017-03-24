@@ -8,6 +8,29 @@ Marina::~Marina(){
 
 }	
 
-void Marina::escribir(string nombre){
-	
+void Marina::escribir(){
+	string path = nombre ;
+	path.append(".log");
+	ofstream file;
+	const char* ruta = path.c_str();
+	file.open(ruta);
+	file<<"\n Marina ";
+	file<<"\nNombre: ";
+	file<<nombre;
+	file<<"\nRaza: ";
+	file<<raza;
+	file<<"\nEdad: ";
+	file<<edad;
+	file<<"\nHaki de Observacion: ";
+	file<<hakiObs;
+	file<<"\nHaki de Armadura:  ";
+	file<<hakiArm;
+	file<<"\nHaki del Rey: ";
+	file<<hakiRey;
+	file<<"\nFecha de ingreso: ";
+	file<<fecha;
+	file<<"\nRango: ";
+	file<<rango;
+	file.close();
+	fruta->escribir(nombre);
 }

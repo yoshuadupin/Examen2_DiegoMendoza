@@ -23,7 +23,7 @@ int main(){
 	vector<FrutaDiablo*> frutas;
 
 	Paramecia* probar = new Paramecia("Gumu gumi" , "NO hace nada");
-	probar->escribir("Luffy");
+	probar->escribir("Luffadads");
 
 
 
