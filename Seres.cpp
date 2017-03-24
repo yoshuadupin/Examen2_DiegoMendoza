@@ -53,3 +53,7 @@ void Seres::setHakiArm(bool hakiArm){
 void Seres::setHakiRey(bool hakiRey){
 	this->hakiRey;
 }
+
+Seres::~Seres(){
+	
+}

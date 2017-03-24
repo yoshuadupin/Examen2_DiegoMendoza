@@ -4,10 +4,13 @@
 
 using namespace std;
 
-class Zoan
+class Zoan:public FrutaDiablo
 {
+private:
+	string tipo;
+	string animal; 
 public:
-	Zoan();
+	Zoan(string , string , string);
 	~Zoan();
 	
 };
