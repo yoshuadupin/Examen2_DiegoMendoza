@@ -1,5 +1,5 @@
 main:	Seres.o Revolucionarios.o Piratas.o Marina.o FrutaDiablo.o Paramecia.o Logia.o Zoan.o main.o
-	g++	Seres.o Revolucionarios.o FrutaDiablo.o main.o Paramecia.o Zoan.o Logia.o Marina.o -o main	
+	g++	Seres.o Piratas.o Revolucionarios.o FrutaDiablo.o main.o Paramecia.o Zoan.o Logia.o Marina.o -o main	
 
 main.o:	main.cpp FrutaDiablo.h Seres.h
 	g++ -c main.cpp

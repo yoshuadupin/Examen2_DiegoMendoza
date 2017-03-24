@@ -22,7 +22,9 @@ int main(){
 	vector<Seres*> seres;
 	vector<FrutaDiablo*> frutas;
 
+	
 
+	
 	return 0;
 }
 
@@ -30,8 +32,6 @@ void agregarSeres(vector<Seres*> seres , vector<FrutaDiablo*> frutas){
 	int opcion;
 	cout<<"Ingresara los atributos generales de tus Seres. Dios Pirata!!!:"<<endl;
 
-	cout<<"Que desea agregar un Marino , Pirata o un Revolucionario:"<<endl;
-	cin>>opcion;
 	string raza;
 	int edad;
 	string nombre;
@@ -159,7 +159,67 @@ void agregarSeres(vector<Seres*> seres , vector<FrutaDiablo*> frutas){
 
 
 	}else{
+		string fechaIngreso;
+		cout<<"Los revolucion es la unica forma de traer el cambio:"<<endl;
+
+		cout<<"Ingrese la fecha en que ingreso a la revolucion:"<<endl;
+		cin>>fechaIngreso;
+
+		seres.push_back(new Revolucionarios(raza,  edad,  nombre, frutas[fruta],  hakiObs ,  hakiArm , hakiRey ,fechaIngreso));
 
 	}
+
+}
+
+void agregarFrutas(vector<FrutaDiablo*> frutas){
+	string nombre;
+	int opcion;
+	cout<<"Ingrese el nombre de la fruta del diablo:"<<endl;
+	cin>>nombre;
+
+	cout<<"Que tipo de fruta es:"<<endl;
+	cin>>opcion;
+
+	if(opcion == 1){
+		string descripcion;
+		cout<<"Fruta Paramecia:"<<endl;
+		cout<<"Que es lo que hace:1.normal, 2.prehistorica o 3.legendaria "<<endl;
+		//cin.ignore();
+		getline(cin , descripcion);
+
+		frutas.push_back(new Paramecia(nombre , descripcion));
+	}else if(opcion == 2){
+		cout<<"Fruta Zoan"<<endl;
+		string tipo;
+		string animal;
+		cout<<"Que tipo es:1.normal, 2.prehistorica o 3.legendaria "<<endl;
+		cin>>opcion;
+
+
+		if(opcion == 1){
+			tipo = "normal";
+		}else if(opcion == 2){
+			tipo = "prehistorica";
+		}else {
+			tipo = "legendaria";
+		}
+
+		cout<<"Que animal representa:"<<endl;
+		cin>>animal;
+
+		frutas.push_back(new Zoan(nombre , tipo , animal));
+
+
+	}else{
+		string representa;
+		cout<<"Fruta Logia"<<endl;
+		cout<<"Que representa:"<<endl;
+		cin>>representa;
+
+		frutas.push_back(new Logia(nombre , representa));
+	}
+
+
+
 }
 
