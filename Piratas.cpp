@@ -34,6 +34,7 @@ void Piratas::escribir(){
 	file<<tripulacion;
 	file<<"\nFuncion: ";
 	file<<funcion;
+	fruta->escribir(file);
 	file.close();
-	fruta->escribir(nombre);
+	
 }

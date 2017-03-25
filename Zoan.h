@@ -13,5 +13,5 @@ public:
 	Zoan(string , string , string);
 	~Zoan();
 	
-	void escribir(string);
+	void escribir(ofstream&);
 };

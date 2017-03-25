@@ -16,6 +16,7 @@ public:
 
 	FrutaDiablo(string);
 	~FrutaDiablo();
-	
-	virtual void escribir(string);
+
+	string getNombre();	
+	virtual void escribir(ofstream&);
 };

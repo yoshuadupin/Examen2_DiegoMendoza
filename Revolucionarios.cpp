@@ -30,7 +30,7 @@ void Revolucionarios::escribir(){
 	file<<hakiRey;
 	file<<"\nFecha de ingreso: ";
 	file<<fechaIngreso;
-	
+	fruta->escribir(file);
 	file.close();
-	fruta->escribir(nombre);
+	
 }

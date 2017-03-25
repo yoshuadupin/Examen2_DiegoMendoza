@@ -8,12 +8,8 @@ Zoan::~Zoan(){
 
 }
 
-void Zoan::escribir(string nombre){
-	string path = nombre;
-	path.append(".log");
-	ofstream file;
-	const char* ruta = path.c_str();
-	file.open(ruta);
+void Zoan::escribir(ofstream& file){
+	
 	file<<"\nZoan";
 	file<<"\nNombre: ";
 	file<<nombre;
@@ -21,5 +17,5 @@ void Zoan::escribir(string nombre){
 	file<<tipo;
 	file<<"\nAnimal: ";
 	file<<animal;
-	file.close();
+	
 }

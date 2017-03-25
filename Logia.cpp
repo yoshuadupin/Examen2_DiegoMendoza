@@ -7,17 +7,13 @@ Logia::~Logia(){
 
 }
 
-void Logia::escribir(string nombre){
-	string path = nombre;
-	path.append(".log");
-	ofstream file;
-	const char* ruta = path.c_str();
-	file.open(ruta);
+void Logia::escribir(ofstream& file){
+	
 	file<<"\nLogia";
 	file<<"\nNombre: ";
 	file<<nombre;
 	file<<"\nElemeto: ";
 	file<<elemento;
-	file.close();
+	
 
 }	

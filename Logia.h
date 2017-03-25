@@ -11,5 +11,5 @@ public:
 	~Logia();
 
 
-	void escribir(string);	
+	void escribir(ofstream&);	
 };

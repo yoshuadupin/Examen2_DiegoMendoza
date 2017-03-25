@@ -16,14 +16,32 @@
 using namespace std;
 
 void agregarSeres(vector<Seres*> , vector<FrutaDiablo*>);
-void agregarFrutas(vector<FrutaDiablo*>);
+FrutaDiablo* agregarFrutas();
 
 int main(){
+	int opcion;
+	char decision;
 	vector<Seres*> seres;
 	vector<FrutaDiablo*> frutas;
 
-	Paramecia* probar = new Paramecia("Gumu gumi" , "NO hace nada");
-	probar->escribir("Luffadads");
+/*	FrutaDiablo* probar = new Paramecia("Gumu gumi" , "NO hace nada");
+	probar->escribir("adawLuffadads");
+*/
+
+	do{
+		cout<<"Tama;o"<<endl;
+		cout<<frutas.size()<<endl;
+		cout<<"Agregar 2.frutas o 1.seres:"<<endl;
+		cin>>opcion;
+		if(opcion == 1){
+			agregarSeres(seres , frutas);
+		}else{
+			frutas.push_back(agregarFrutas());
+		}
+		cout<<"Quirese seguir agregando:"<<endl;
+		cin>>decision;
+	}while(decision == 's');
+
 
 
 
@@ -67,9 +85,15 @@ void agregarSeres(vector<Seres*> seres , vector<FrutaDiablo*> frutas){
 
 	cout<<"Ingrese el nombre"<<endl;
 	//cin.ignore();
+	cin.ignore();
 	getline(cin , nombre);
 
 	cout<<"Ingrese el indice de la fruta:"<<endl;
+	cout<<frutas.size();
+	for (int i = 0; i < frutas.size(); ++i)
+	{
+		cout<<frutas[i]->getNombre()<<endl;
+	}
 	cin>> fruta;
 
 	cout<<"Tiene Haki de observacion:"<<endl;
@@ -153,10 +177,12 @@ void agregarSeres(vector<Seres*> seres , vector<FrutaDiablo*> frutas){
 		}
 
 		cout<<"Ingrese la tripulacion:"<<endl;
-		cin>>tripulacion;
+		cin.ignore();
+		getline(cin , tripulacion);
 
 		cout<<"Ingrese la funcion:"<<endl;
-		cin>>funcion;
+		cin.ignore();
+		getline(cin,funcion);
 
 		seres.push_back(new Piratas(raza,  edad,  nombre, frutas[fruta],  hakiObs ,  hakiArm , hakiRey ,oceano , tripulacion , funcion));
 
@@ -172,13 +198,16 @@ void agregarSeres(vector<Seres*> seres , vector<FrutaDiablo*> frutas){
 
 	}
 
+	seres[seres.size()-1]->escribir();
+
 }
 
-void agregarFrutas(vector<FrutaDiablo*> frutas){
+FrutaDiablo* agregarFrutas(){
 	string nombre;
 	int opcion;
 	cout<<"Ingrese el nombre de la fruta del diablo:"<<endl;
-	cin>>nombre;
+	cin.ignore();
+	getline(cin , nombre);
 
 	cout<<"Que tipo de fruta es:"<<endl;
 	cin>>opcion;
@@ -186,11 +215,11 @@ void agregarFrutas(vector<FrutaDiablo*> frutas){
 	if(opcion == 1){
 		string descripcion;
 		cout<<"Fruta Paramecia:"<<endl;
-		cout<<"Que es lo que hace:1.normal, 2.prehistorica o 3.legendaria "<<endl;
-		//cin.ignore();
+		cout<<"Que es lo que hace:"<<endl;
+		cin.ignore();
 		getline(cin , descripcion);
 
-		frutas.push_back(new Paramecia(nombre , descripcion));
+		return new Paramecia(nombre , descripcion);
 	}else if(opcion == 2){
 		cout<<"Fruta Zoan"<<endl;
 		string tipo;
@@ -210,7 +239,7 @@ void agregarFrutas(vector<FrutaDiablo*> frutas){
 		cout<<"Que animal representa:"<<endl;
 		cin>>animal;
 
-		frutas.push_back(new Zoan(nombre , tipo , animal));
+		return new Zoan(nombre , tipo , animal);
 
 
 	}else{
@@ -219,7 +248,7 @@ void agregarFrutas(vector<FrutaDiablo*> frutas){
 		cout<<"Que representa:"<<endl;
 		cin>>representa;
 
-		frutas.push_back(new Logia(nombre , representa));
+		return new Logia(nombre , representa);
 	}
 
 

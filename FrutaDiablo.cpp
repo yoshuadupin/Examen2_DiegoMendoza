@@ -10,7 +10,10 @@ FrutaDiablo::~FrutaDiablo(){
 	
 }
 
-void FrutaDiablo::escribir(string nombre){
+string FrutaDiablo::getNombre(){
+	return nombre;
+}
+void FrutaDiablo::escribir(ofstream& file){
 	cout<<"Hola"<<endl;
 }
 
